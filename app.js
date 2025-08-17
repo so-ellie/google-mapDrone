@@ -12,9 +12,6 @@ shut down: closed fist,
 start: open palm.
 */
 
-//optional: add a START var so we can reset drone to start
-
-
 var map = null;
 var droneMarker = null;
 var START = {lat: 33.205975, lng: 35.568292};
@@ -206,3 +203,4 @@ function handleGesture(name) {
     if (name === "ILoveYou") {turnLeft(); lastActionAt = now;}
     if (name === "Victory") {turnRight(); lastActionAt = now;}
 }
+
