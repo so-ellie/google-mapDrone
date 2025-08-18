@@ -106,7 +106,7 @@ async function startCam() {
         startGestureLoop();
     }
     catch(err) {
-        alert('camera error: ' + err.name);
+        alert('camera error: ' + err.mesage);
         console.error(err);
     }
 }
@@ -204,5 +204,6 @@ function handleGesture(name) {
     if (name === "ILoveYou") {turnLeft(); lastActionAt = now;}
     if (name === "Victory") {turnRight(); lastActionAt = now;}
 }
+
 
 
