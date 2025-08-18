@@ -1,6 +1,6 @@
 
 
-import { GestureRecognizer, FilesetResolver } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest";
+import { GestureRecognizer, FilesetResolver } from "https://unpkg.com/@mediapipe/tasks-vision@latest?module";
 
 /*
 thumb up: forward, 
@@ -204,4 +204,5 @@ function handleGesture(name) {
     if (name === "ILoveYou") {turnLeft(); lastActionAt = now;}
     if (name === "Victory") {turnRight(); lastActionAt = now;}
 }
+
 
