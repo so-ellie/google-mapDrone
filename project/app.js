@@ -106,7 +106,7 @@ async function startCam() {
         startGestureLoop();
     }
     catch(err) {
-        alert('camera error: ' + err.mesage);
+        alert('camera error: ' + err.name);
         console.error(err);
     }
 }
@@ -121,7 +121,7 @@ async function loadRecognizer() {
         "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
     );
     const rec = await GestureRecognizer.createFromModelPath(files,
-        "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float32/latest/gesture_recognizer.task"
+        "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/latest/gesture_recognizer.task"
     );  
     
     await rec.setOptions({runningMode: "VIDEO", numHands: 1});
@@ -204,6 +204,3 @@ function handleGesture(name) {
     if (name === "ILoveYou") {turnLeft(); lastActionAt = now;}
     if (name === "Victory") {turnRight(); lastActionAt = now;}
 }
-
-
-
