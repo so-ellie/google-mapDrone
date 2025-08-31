@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> All Hands on Drone (JS) </title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <!-- camera button -->
+        <button id="startCam">start camera</button>
+        <video id="cam" autoplay muted playsinline></video>        
+         
+        <div id="map"></div>
+        
+        <script type="module" src="app.js"></script>
+
+        <!-- load google map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTDFLlGnWCgbKToRsQh33GIgCNrtinU4&callback=initMap&loading=async&libraries=geometry,marker" 
+        defer
+        ></script>
+
+
+    </body>
+</html>
